@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.samset.firebaseappexample.MainActivity">
+    <TextView
+        android:textSize="20dp"
+        android:text="Registration"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:id="@+id/etfname"
+        android:hint="FName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:id="@+id/etlname"
+        android:hint="LName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:id="@+id/etemail"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:id="@+id/etcontact"
+        android:hint="Contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:textSize="25dp"
+        android:id="@+id/btnSave"
+        android:hint="Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_marginTop="5dp"
+        android:textSize="25dp"
+        android:id="@+id/btnget"
+        android:hint="Show Data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
