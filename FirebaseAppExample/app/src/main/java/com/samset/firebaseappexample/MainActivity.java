@@ -112,35 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mRef.addChildEventListener(new ChildEventListener() {
-        @Override
-        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-            User person = dataSnapshot.getValue(User.class);
-            String string = "Name c: "+person.getFirstname()+"\nAddress c: "+person.getContact()+"\n\n";
-
-            Log.e("Main","data cc "+string);
-        }
-
-        @Override
-        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-        }
-
-        @Override
-        public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-        }
-
-        @Override
-        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-        }
-
-        @Override
-        public void onCancelled(FirebaseError firebaseError) {
-
-        }
-    });
+        
     }
 
     private void saveData()

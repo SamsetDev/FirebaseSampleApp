@@ -1,6 +1,7 @@
 package com.samset.firebaseappexample.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,8 @@ public class UserAdapter extends BaseAdapter {
             myViewHolder = (MyViewHolder) convertView.getTag();
         }
         User user = list.get(position);
+
+        Log.e("Main","data ada "+list.get(position).getFirstname());
         myViewHolder.fname.setText(user.firstname);
         myViewHolder.lname.setText(user.lastname);
         myViewHolder.mail.setText(user.email);
