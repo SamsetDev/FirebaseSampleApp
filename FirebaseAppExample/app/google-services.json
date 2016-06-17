@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "221975929305",
+    "firebase_url": "https://saveretrive.firebaseio.com",
+    "project_id": "saveretrive",
+    "storage_bucket": "saveretrive.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221975929305:android:39502eb9b63bf5c6",
+        "android_client_info": {
+          "package_name": "com.samset.firebaseappexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221975929305-802jngjt1muncte2gpi1ositklhha9u1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samset.firebaseappexample",
+            "certificate_hash": "CFAF42FC9E5CDB120245253784988F3E4B6A62EC"
+          }
+        },
+        {
+          "client_id": "221975929305-bstgmsckfplmutf5h1b8cggltja6qlmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfvgPCvafmEbwuylsMoetWDkZaTw7yhcE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221975929305-bstgmsckfplmutf5h1b8cggltja6qlmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -22,7 +22,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String URL="https://crackling-inferno-7719.firebaseio.com/UserInfo";
+    private static final String URL="https://saveretrive.firebaseio.com/UserInfo";
+    //https://crackling-inferno-7719.firebaseio.com/UserInfo
+   //https://saveretrive.firebaseio.com
     private ListView listView;
     private Button btnsave,btnget;
     private EditText fname,lname,email,contect;
@@ -73,8 +75,17 @@ public class MainActivity extends AppCompatActivity {
                 listdata.clear();
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     //Getting the data from snapshot
+                    User user=new User();
                     User person = postSnapshot.getValue(User.class);
-                    listdata.add(person);
+
+                    user.setFirstname(postSnapshot.getValue(User.class).getFirstname());
+                    user.setLastname(postSnapshot.getValue(User.class).getLastname());
+                    user.setEmail(postSnapshot.getValue(User.class).getEmail());
+                    user.setContact(postSnapshot.getValue(User.class).getContact());
+
+
+
+                    listdata.add(user);
                     //Adding it to a string
                     String string = "Name: "+person.getFirstname()+"\nAddress: "+person.getContact()+"\n\n";
 
@@ -98,6 +109,38 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("The read failed: " + firebaseError.getMessage());
             }
         });
+
+
+
+        mRef.addChildEventListener(new ChildEventListener() {
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            User person = dataSnapshot.getValue(User.class);
+            String string = "Name c: "+person.getFirstname()+"\nAddress c: "+person.getContact()+"\n\n";
+
+            Log.e("Main","data cc "+string);
+        }
+
+        @Override
+        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+        }
+
+        @Override
+        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onCancelled(FirebaseError firebaseError) {
+
+        }
+    });
     }
 
     private void saveData()
@@ -123,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             User user=new User(FNAME,LNAME,MAIL,CONTACT);
-            mRef.child("UserInfo").push().setValue(user);
+            mRef.push().setValue(user);
             fname.setText("");
             lname.setText("");
             email.setText("");
